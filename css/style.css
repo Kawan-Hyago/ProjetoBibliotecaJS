@@ -1,0 +1,102 @@
+/* Reset básico e fundo preto */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Cabeçalho */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: #ffffff;
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+/* Estrutura Principal */
+main {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Formulário e Inputs */
+form#formLivro, input#pesquisa {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+input {
+    background-color: #2a2a2a;
+    border: 1px solid #3a3a3a;
+    border-radius: 8px;
+    padding: 12px;
+    color: #ffffff;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+input:focus {
+    border-color: #6200ee;
+}
+
+input::placeholder {
+    color: #888888;
+}
+
+/* Botão de Cadastrar */
+button {
+    background-color: #bb86fc;
+    color: #121212;
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #3700b3;
+    color: #ffffff;
+}
+
+/* Seção de Estatísticas */
+#estatisticas, #listaLivros {
+    background-color: #1e1e1e;
+    padding: 15px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    font-size: 0.95rem;
+}
+
+/* Seção de Lista de Livros */
+#listaLivros {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

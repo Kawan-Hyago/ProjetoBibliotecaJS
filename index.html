@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Leituras</title>
+    <link rel="stylesheet" href="../biblioteca/css/style.css">
+    <!-- Repare que não tem type="module" aqui -->
+    <script src="../biblioteca/js/app.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Lista de Leituras</h1>
+    </header>
+
+    <main>
+        <form id="formLivro">
+            <input id="titulo" placeholder="Título" required>
+            <input id="autor" placeholder="Autor" required>
+            <input id="genero" placeholder="Gênero" required>
+            <input id="paginas" type="number" placeholder="Páginas" required>
+            <button type="submit">Cadastrar</button>
+        </form>
+
+        <input id="pesquisa" placeholder="Pesquisar por título...">
+        
+        <section id="estatisticas"></section>
+        <section id="listaLivros"></section>
+    </main>
+</body>
+</html>

@@ -35,7 +35,7 @@ main {
 }
 
 /* Formulário e Inputs */
-form#formLivro, input#pesquisa {
+form#formLivro, form#formEmprestimo, input#pesquisa {
     background-color: #1e1e1e;
     padding: 20px;
     border-radius: 12px;
@@ -45,7 +45,7 @@ form#formLivro, input#pesquisa {
     gap: 12px;
 }
 
-input {
+input, select {
     background-color: #2a2a2a;
     border: 1px solid #3a3a3a;
     border-radius: 8px;
@@ -56,7 +56,7 @@ input {
     transition: border-color 0.2s;
 }
 
-input:focus {
+input:focus, select:focus {
     border-color: #6200ee;
 }
 
@@ -99,4 +99,66 @@ button:hover {
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+
+/* ---------- Empréstimos ---------- */
+.titulo-secao {
+    color: #ffffff;
+    font-size: 1.4rem;
+    margin-top: 10px;
+}
+
+input[type="date"] {
+    color-scheme: dark;
+}
+
+select:disabled, button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+button:disabled:hover {
+    background-color: #bb86fc;
+    color: #121212;
+}
+
+#listaEmprestimos {
+    background-color: #1e1e1e;
+    padding: 15px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 0.95rem;
+}
+
+.emprestimo {
+    border: 1px solid #3a3a3a;
+    border-left: 4px solid #bb86fc;
+    border-radius: 8px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.emprestimo.devolvido {
+    border-left-color: #03dac6;
+    opacity: 0.8;
+}
+
+.emprestimo button {
+    padding: 8px;
+    font-size: 0.9rem;
+}
+
+.emprestimo button.secundario {
+    background-color: transparent;
+    color: #e0e0e0;
+    border: 1px solid #3a3a3a;
+}
+
+.emprestimo button.secundario:hover {
+    background-color: #3a3a3a;
 }
